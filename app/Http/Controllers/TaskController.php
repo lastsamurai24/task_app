@@ -62,11 +62,7 @@ class TaskController extends Controller
         $task = Task::find($id);
         return view('tasks.show', ['task' => $task]);
     }
-    public function home($id)
-    {
-        $task = Task::find($id);
-        return view('tasks.home', ['task' => $task]);
-    }
+
     //delet
     public function destroy($id)
     {
