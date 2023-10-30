@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        // ArticleSeeder（シーダークラス）の呼び出し
+        $this->call(TaskSeeder::class);
     }
 }
