@@ -17,6 +17,7 @@ class TaskController extends Controller
         // tasksディレクトリーの中のindexページを指定し、tasksの連想配列を代入
         return view('tasks.index', ['tasks' => $tasks]);
     }
+
     public function create()
     {
         return view('tasks.create');
@@ -38,6 +39,7 @@ class TaskController extends Controller
         // 登録したらindexに戻る
         return redirect(route('tasks.index'));
     }
+
     public function edit($id)
     {
         $task = Task::find($id);
@@ -56,14 +58,13 @@ class TaskController extends Controller
         // 登録したらindexに戻る
         return redirect('/tasks');
     }
-    // showページへ移動
+
     public function show($id)
     {
         $task = Task::find($id);
         return view('tasks.show', ['task' => $task]);
     }
 
-    //delet
     public function destroy($id)
     {
         $task = Task::find($id);
