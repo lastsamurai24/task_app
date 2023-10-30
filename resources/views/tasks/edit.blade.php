@@ -23,7 +23,7 @@
         </div>
     @endif
     <h1>投稿論文編集</h1>
-    <form action="{{ route('tasks.update', $task) }}" method="post" class="edit">
+    <form action="{{ route('tasks.update', $task) }}" method="post" >
         @csrf
         @method('PATCH')
         <p>
