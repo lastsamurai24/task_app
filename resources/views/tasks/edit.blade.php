@@ -23,7 +23,7 @@
         </div>
     @endif
     <h1>投稿論文編集</h1>
-    <form action="{{ route('tasks.update', $task) }}" method="post">
+    <form action="{{ route('tasks.update', $task) }}" method="post" class="edit">
         @csrf
         @method('PATCH')
         <p>
@@ -35,10 +35,11 @@
             <textarea name="body" class="body" id="body">{{ old('body', $task->body) }}</textarea>
         </p>
 
-        <input type="submit" value="更新">
-
-        <button onclick='location.href="{{ route('tasks.show', $task->id) }}"'>詳細へ戻る</button>
+    <input type="submit" value="更新">
+    <button type="button" onclick='location.href="{{  route('tasks.show', $task)}}"'>詳細へ戻る</button>
     </form>
+    
+</div>
 </body>
 
 </html>
